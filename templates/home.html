@@ -1,0 +1,137 @@
+{% extends 'common/layout.html' %}
+{% load static %}
+{% block style %}
+    <style>
+        #savingsBoxArea {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        #dailyCheckArea {
+            padding-bottom: 60px;
+        }
+
+        body {
+            background-color: #EEEEEE;
+        }
+
+        .board .panel {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 30px;
+        }
+
+        .board .panel > div:last-child {
+            padding-top: 13px;
+        }
+
+        .board .panel > div:first-child {
+            text-align: center;
+            width: 35%;
+        }
+
+        .board .panel > div > p {
+            margin-bottom: 0;
+        }
+
+        .fa-5 {
+            font-size: 6em;
+        }
+
+        .background-img {
+            width: 100%;
+        }
+
+        .button-box-wrap {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .board_line{
+            margin: 20px auto;
+            background: #fff;
+            width: 50%;
+            height: 1px;
+
+        }
+
+        .button-box-title {
+            color:#ffffff;
+        }
+    </style>
+{% endblock style %}
+
+{% block content %}
+    <section id="savingsBoxArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>일잘러스</h2>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-2">
+                    <div class="board">
+                        <div class="panel clearfix">
+                            <div class="float-left">
+                                <i class="fa fa-money fa-5" aria-hidden="true"></i>
+                            </div>
+                            <div class="float-right">
+                                <h3 class="panel-title">₩ 111,000</h3>
+                                <p>10-12시즌 누적 기부금</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4">
+                    <div class="board">
+                        <div class="panel clearfix">
+                            <div class="float-left">
+                                <i class="fa fa-users fa-5" aria-hidden="true"></i>
+                            </div>
+                            <div class="float-right">
+                                <h3 class="panel-title">100%</h3>
+                                <p>팀 데일리 미션 참여도</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-2">
+                    <div class="board">
+                        <div class="panel clearfix">
+                            <div class="float-left">
+                                <i class="fa fa-user fa-5" aria-hidden="true"></i>
+                            </div>
+                            <div class="float-right">
+                                <h3 class="panel-title">100%</h3>
+                                <p>개인 데일리 미션 참여도</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dailyCheckArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img class="background-img" src="{% static 'img/daily_landing.jpg' %}" alt="랜딩 이미지">
+                    <div class="button-box-wrap">
+                        <div class="row justify-content-center align-items-center" style="height:100%;">
+                            <div class="col-6 text-center">
+                                <h3 class="button-box-title">데일리 미션</h3>
+                                <div class="board_line"></div>
+                                <button>확인</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
